@@ -1,4 +1,4 @@
-import appdaemon.appapi as appapi
+import my_appapi as appapi
 import datetime
 import random
 #import homeassistant.appapi as appapi
@@ -8,7 +8,7 @@ import random
 # Args:
 #
         
-class XmasLights(appapi.AppDaemon):
+class XmasLights(appapi.my_appapi):
 
   def initialize(self):
      self.log("Turning on Xmas Tree.")
