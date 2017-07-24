@@ -44,7 +44,7 @@ class XmasLights(appapi.my_appapi):
        self.turn_off("switch.outdoor_xmas_lights")
 
   def turn_on_lights(self, kwargs):
-     self.turn_on("group.xmas")
+     self.turn_on("group.app_xmaslights_xmas")
 
   def turn_off_lights(self, kwargs):
      if self.get_state("switch.switch")=="on":
@@ -53,7 +53,7 @@ class XmasLights(appapi.my_appapi):
        self.log("part override active {}, {}, {}".format(now, delta,now+delta))
        self.run_at(self.turn_off_lights,now+delta)
      else:
-       self.turn_off("group.xmas")
+       self.turn_off("group.app_xmaslights_xmas")
 
   def porchlightsavailable(self, entity, attribute, old, new, kwargs):
     self.log("porch lights are available {}".format(entity, new))
